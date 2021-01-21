@@ -1,0 +1,7 @@
+{
+  "name": "MovieRestApi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
