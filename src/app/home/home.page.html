@@ -1,20 +1,21 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-title>MovieRestApi</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="light">
+    <ion-searchbar [(ngModel)]="searchTitle" placeholder="Recherche"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button color="dark" (click)="searchMovie()">
+        <ion-icon name="search-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="img_box">
+    <img [src]="movieData.imageUrl" />
   </div>
+  <h1>{{ movieData.title }}</h1>
+  <p>{{ movieData.description }}</p>
 </ion-content>
